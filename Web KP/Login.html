@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div class="background">
+        <!-- Video Background -->
+        <video autoplay muted loop id="bg-video">
+            <source src="BgVid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="login-container">
+            <div class="logo">
+                <img src="Logo.png" alt="Pusri Logo">
+            </div>
+            <form class="login-form" onsubmit="return validateLogin(event)">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="show-password">
+                    <input type="checkbox" id="show-password" onclick="togglePassword()">
+                    <label for="show-password">Show Password</label>
+                </div>
+                <button type="submit" class="login-button">Login</button>
+                <div id="error-message" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+    <script src="Login.js"></script>
+</body>
+</html>

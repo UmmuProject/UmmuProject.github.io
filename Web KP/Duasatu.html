@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Data Stok Sumba Riau</title>
+    <link rel="stylesheet" href="duasatu.css">
+    <!-- Include SheetJS library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="Logo.png" alt="Logo" class="sidebar-logo">
+        <button class="close-btn" onclick="closeSidebar()">×</button>
+        <ul>
+            <li><a href="index.html"><img src="Iconhome.png" alt="Home Icon" class="menu-icon"> Home</a></li>
+            <li>
+                <a href="stok.html" onclick="toggleSubmenu(event)"><img src="Iconstok.png" alt="Stock Icon" class="menu-icon"> Stok</a>
+                <div class="submenu">
+                    <a href="duapuluh.html">Sumbangsel</a>
+                    <a href="duasatu.html">Sumba Riau</a>
+                    <a href="duadua.html">Jateng</a>
+                </div>
+            </li>
+            <li><a href="Realisasi1.html"><img src="iconreal.png" alt="Realisasi Icon" class="menu-icon"> Realisasi</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <button class="menu-btn" onclick="openSidebar()">☰ Menu</button>
+            <h1>Upload & Display Excel</h1>
+        </header>
+        <section class="content">
+            <div class="container">
+
+              <!-- Image and Explanation Section -->
+              <div class="info-section">
+                <img src="icon.png" alt="Information Image" class="info-image">
+                <p class="info-text">Here is a brief explanation about the data input and upload process. Make sure to follow the guidelines for a smooth data entry experience.</p>
+            </div>
+
+                <h2>Input Data Stok Sumba Riau</h2>
+                <div class="add-button-container">
+                    <button id="addButton">Add Data</button>
+                </div>
+
+            <div id="uploadFormContainer" style="display:none;">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="keterangan">Keterangan:</label>
+                        <input type="text" id="keterangan" name="keterangan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="excelFile">Choose Excel file:</label>
+                        <input type="file" id="excelFile" name="excelFile" accept=".xls,.xlsx" required>
+                    </div>
+                    <button type="button" onclick="handleFormSubmit()">Submit</button>
+                </form>
+            </div>
+
+            <div class="table-container">
+                <table id="keteranganTable">
+                    <thead>
+                        <tr>
+                            <th>Keterangan</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="save-button-container">
+                <button id="saveButton">Simpan Data</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include external JavaScript file -->
+    <script src="duasatu.js"></script>
+</body>
+
+</html>

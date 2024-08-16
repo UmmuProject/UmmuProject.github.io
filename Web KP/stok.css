@@ -1,0 +1,55 @@
+/* stok.css */
+.table-container {
+    margin-top: 100px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #ddd;
+}
+
+input[type=file] {
+    margin-bottom: 20px;
+}
+
+.year-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.year-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.year-buttons button:hover {
+    background-color: #0056b3;
+}
